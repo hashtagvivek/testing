@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>website</title>
+        <link rel="stylesheet" href="website.css">
+    </head>
+
+    <body>
+        <section><div id="bar">
+            <ul>
+               <!-- <li><img src="logo.jpeg" id="logo"></li>-->
+                <li><a href="#intro">OVERVIEW</a></li>
+                <li><a href="#bungo">BUNGALOW</a></li>
+                <li><a href="#twos">TWO STORY LOFT</a></li>
+                <li><a href="#busp">BUILDING SPECS.</a></li>
+                <li><a href="#shipi">SHIPPING INFO</a></li>
+                <li class="contact"><a href="#conto"><b>CONTACT</b></a></li>
+            </ul>
+        </div></section>
+<div class="slide">
+    <div class="fade">
+        <img src="center.jpg" style="width: 100%">
+        <div class="text">CHOOSE</div>
+    </div>
+    <div class="fade">
+        <img src="left.jpg" style="width: 100%">
+        <div class="text">RIGHT IMAGE</div>
+    </div>
+    <div class="fade">
+        <img src="right.jpg" style="width: 100%">
+        <div class="text">LEFT IMAGE</div>
+    </div>
+
+    <a class="pre" onclick="plusSlides(-1)">&#10094</a>
+    <a class="post" onclick="plusSlides(1)">&#10095</a>
+</div>
+<br>
+<div style="text-align: center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+</div>
+</div>
+        <div id="intro"><h2>WHY CHOOSE CANADA MINI HOMES?</h2>
+<a class="a1">Canada Mini Homes are the perfect starter home for new families, first-time home buyers, the aging in place, and those looking to downsize. <br>
+    These easy-to-maintain, energy efficient homes offer surprisingly spacious living with all the craftsmanship and modern conveniences one would expect in a larger home.<br>
+    These homes are built in climate controlled environments to the highest standards.Each home is shipped to site fully built and ready to live in.<br>
+    All of our mini homes are proudly made in Canada and designed to withstand the harshest of Canadian climates with R22 wall systems, and R34 floor systems.<br>
+    Canadian Mini Homes offers our buyers with an exclusive down payment assistance program.</a>
+        </div><br>
+
+
+        
+<div class="twodiv"><h3 class="h3">TWO PACKAGE TO CHOOSE FROM</h3>
+    <div class="grid">
+        <div class="colm"><b>BUNGALOW</b></div>
+        <div class="bed">2bedroom,1bathroom,680 sq.ft.</div>
+        <a href="#" class="tg">Take a look</a>
+    </div>
+    <div class="grid">
+        <div class="colm"><b>TWO STORY W/LOFT.</b></div>
+        <div class="bed">2bedroom,1bathroom,500 sq.ft.</div>
+        <a href="#" class="tg">Take a look</a>
+    </div>
+</div>
+
+<div class="bungalow" id="bungo"><h3>BUNGALOW</h3>
+    <div class="div2">
+        <div class="b1"><img id="myimg" class="image" src="center.jpg" width="100%"></div>
+        <div class="b1">
+            <li>QUALITY</li>
+            <li>SPECS.</li>
+            <li>PRICE</li>
+            <li>DATE</li>
+            <li>CHAT</li>
+        </div>
+    </div>
+  <div class="bare">
+    <div class="b2"><a href="#" onclick="myFunction()">INTERIOR</a></div>
+    <div class="b2"><a href="#" onclick="myFunction()">EXTERIOR</a></div>
+    </div>
+</div>
+<div class="war">
+    <div class="b3"><a href="#">2 BEDROOM</a></div>
+    <div class="b3"><a href="#">1 BATHROOM</a></div>
+    <div class="b3"><a href="#">700 sq.ft.</a></div>
+</div>
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("fade");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              return false;
+            }
+            </script>
+            <script>
+            function myFunction(){
+                document.getElementById("myimg").src="left.jpg";
+                return false;
+            }
+            </script>
+    </body>
+</html>
